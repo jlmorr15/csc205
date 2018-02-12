@@ -1,0 +1,8 @@
+/**
+* Main method
+* Kicks off the program
+* @param args
+*/
+/* This is a single line multi-liner */
+/* //This wont be picked up by single line */
+//"this should get picked up, but the comments encapulated in the string should be skipped.

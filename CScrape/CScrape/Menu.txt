@@ -1,0 +1,28 @@
+Comment Scraper - J. Morris
+LINE#: [-- Comment Data --]
+
+00011: //Not much to do here.
+00014: /**
+00015: * getInput()
+00016: * returns this.input
+00017: * @return
+00018: */
+00023: /**
+00024: * initScanner
+00025: * sets this.scanner to a new scanner instance.
+00026: */
+00032: /**
+00033: * closeScanner
+00034: * Closes the scanner resource to prevent leaks
+00035: */
+00041: /**
+00042: * prompt
+00043: * Prompts the user to enter a file name.
+00044: */
+00051: /**
+00052: * render
+00053: * Shows the menu on a loop until exit or [exit] is entered.
+00054: */
+00058: //Set up our scanner resource
+00059: //Prompt for a file
+00076: //Close the Scanner
