@@ -1,0 +1,52 @@
+Comment Scraper - J. Morris
+LINE#: [-- Comment Data --]
+
+00005: //record data to buffer?
+00006: //The File we will parse
+00007: //The File we will write to.
+00010: /**
+00011: * Constructor
+00012: * @param file - Input File
+00013: * @param outFile - Output Filename
+00014: */
+00019: //Moving parse() out of constructor and placing writer.close in parse()
+00020: //this.parse();
+00021: //this.writer.close();
+00024: /**
+00025: * Constructor
+00026: * Debug Constructor - Opens CScrape.java for parsing
+00027: * @throws IOException - Input or Output issues? I'll let you know!
+00028: */
+00031: //The inFile we will parse
+00035: /**
+00036: * initWriter
+00037: * Instantiates PrintWriter into this.writer
+00038: * @throws FileNotFoundException - No File, No Output!
+00039: * @throws UnsupportedEncodingException - Hopefully this doesn't ever come up...
+00040: */
+00045: /**
+00046: * parse
+00047: * This method inits the scanner and reads the file line by line passing each line
+00048: * to the parseLine method, writing the results to the output file.
+00049: * @throws IOException - File Not Found? Readable? Writable?
+00050: */
+00067: //Zero fill our line numbers to 5 digits. If someone scrapes a file with > 99999 lines, they deserve the ugly output.
+00074: /**
+00075: * parseLine
+00076: * The "Meat and Potatoes" of our class.
+00077: * This method goes line by line looking for comments and acts on them if warranted.
+00078: * @param line - a line of text from input inFile
+00079: * @return String
+00080: */
+00083: //are we currently in a string?
+00084: //Should we clear the recording status once we finish this line?
+00091: //our 2 character look behind for finding escaped quotes
+00093: //get our peekAhead values which will be used for finding comments
+00098: //if we see a quote, and its not escaped, and we are NOT recording, toggle the inString flag.
+00100: //toggle inString value.
+00106: //Single Line Found!
+00111: //Block Style Found!
+00116: //Manually close the comment
+00117: //Stop Recording
+00120: //If we are recording, concat our output String
+00125: //Turn off recording status at the end of the line if it was for a single line comment.

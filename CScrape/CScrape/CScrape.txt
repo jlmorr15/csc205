@@ -1,0 +1,19 @@
+Comment Scraper - J. Morris
+LINE#: [-- Comment Data --]
+
+00003: /* This is a single line block comment */
+00005: /* //This wont be picked up by the // single line because its already recording the block comment */
+00006: // "this should get picked up by the scraper since the quote comes AFTER we start recording."
+00008: /**
+00009: * Main method
+00010: * Kicks off the program
+00011: * @param args
+00012: */
+00014: //I was going to allow a -d option to toggle debug, but figured there was no real point in putting in the extra effort.
+00015: //Change to True for debug mode (Automatically scrapes CScrape.java and outputs Test.txt)
+00017: // The comment in the string of the welcome message should be skipped because we ignore escaped quotes in string detection.
+00018: // Thus the system knows we are still inside a string and wont start recording.
+00021: //Run demo on CScrape.java and output Test.txt
+00024: //instantiate the menu
+00025: //"render" the menu.
+00026: //They opted to exit when they leave render()
