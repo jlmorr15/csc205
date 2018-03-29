@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Balance {
 	private LinkedStack<Character> stack;
-	private LinkedStack<BracketPair> pairStack;
+	private BracketPairList pairList;
+	private String reservedSymbols;
 	
 	public static void main(String[] args) {
 	    {
@@ -14,8 +15,9 @@ public class Balance {
 	        do
 	        {  
 	            Balance tester = new Balance();
+	            tester.pairList = new BracketPairList();
 	            
-				System.out.println("Enter a string with ()'s: ");
+				System.out.println("Enter a string with bracket pairs in it: ");
 	            expression = in.nextLine();
 
 	            result = tester.isBalanced(expression);
@@ -34,7 +36,12 @@ public class Balance {
 
 	public void registerPair(String o, String c)
 	{
-		
+		if(this.reservedSymbols.contains(o) || this.reservedSymbols.contains(c)) {
+			System.out.println(o+" AND/OR "+c+" ARE ALREADY IN USE.");
+		} else {
+			this.pairList.registerPair(new BracketPair(o,c));
+			this.reservedSymbols = this.reservedSymbols+o+c;
+		}
 	}
 	
 	public Balance() {
@@ -45,7 +52,12 @@ public class Balance {
 		char a = 'a';
 		
 		for (int i = 0; i < s.length(); i++) {
-			switch (s.charAt(i)) {
+			char x = s.charAt(i);
+			if(this.pairList.isValidOpener(s)) {
+				//
+			}
+			
+			switch (x) {
 				case '(': 
 					stack.push(new Character(a));
 					System.out.print(a++);

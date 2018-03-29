@@ -40,7 +40,7 @@ public class LinkedStack<T> implements StackADT<T> {
 	 */
 	public boolean isEmpty()
 	{
-		return this.linkedList.length() < 0 ? true:false;
+		return this.linkedList.length() < 1 ? true:false;
 	}
 	
 	/**

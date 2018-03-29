@@ -1,7 +1,7 @@
 import java.util.NoSuchElementException;
 
 public class List<T> {
-	private Node<T> head;
+	protected Node<T> head;
 	
 	public List() {
 		head = null;

@@ -24,4 +24,9 @@ public class BracketPair {
 	{
 		return this.closer.equals(c) ? true:false;
 	}
+	
+	public String toString()
+	{
+		return this.getOpener();
+	}
 }
